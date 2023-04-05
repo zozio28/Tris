@@ -9,14 +9,15 @@ int main(){
 
   //Variables
   int taille = 10;
-  int nombre = 4;
+  int nombre = 5;
   int* ptab = allouer(taille);
   int** ptabcopie = malloc(nombre*sizeof(int*));;
   char* nom[] = {
     "à Bulle",
     "par Selection",
     "par Insertion",
-    "Rapide"
+    "Rapide",
+    "Fusion"
   };
 
   float temps_total;
@@ -45,6 +46,9 @@ int main(){
       break;
       case 3:
       triRapide(ptabcopie[i],0,taille);
+      break;
+      case 4:
+      triFusion(ptabcopie[i],0,taille);
       break;
     }
     t2=clock();
